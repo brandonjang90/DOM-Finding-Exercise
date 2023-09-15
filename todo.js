@@ -22,10 +22,12 @@ const taskList = document.querySelector('#list');
         input.value = '';
         taskList.appendChild(newTask); 
 
-        completeBtn.addEventListener('click', function(e){
-            newTask.innerHTML = newTask.innerText.strikethrough();
-        });
-        removeBtn.addEventListener('click', function(e){
-            e.target.parentElement.remove();
-    }
-)});
+    removeBtn.addEventListener('click', function(e){
+        e.target.parentElement.remove();
+    });
+
+    completeBtn.addEventListener('click', function(e){
+        e.target.parentElement.style.setProperty('text-decoration', 'line-through');
+    });
+
+});
